@@ -1,1 +1,1 @@
-echo 'Hello Ruturaj!'
+echo 'Hello Rituraj!'
