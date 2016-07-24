@@ -1,1 +1,2 @@
-echo 'Hello Ajinkya!'
+echo 'Yo mon Whatsap!'
+sudo apt-get update
