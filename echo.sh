@@ -1,1 +1,1 @@
-echo 'Yo mon Whatsap!! on 25/!!'
+echo 'Yo mon Whatsap!! on 25/10!!'
