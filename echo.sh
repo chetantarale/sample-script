@@ -32,12 +32,11 @@ configure_node_creds() {
 tag_push(){
   pushd ./IN/$RES_REPO/gitRepo
   echo "pushing git tag $VERSION to $RES_REPO"
-  #git checkout $(git rev-list -n 1 $REL_VER)
   git remote remove origin
   git remote add origin git@github.com:chetantarale/testRepo.git
-  #git remote add origin https://chetantarale:xxxxx@github.com/chetantarale/testRepo.git
   git tag $VERSION
   git push origin $VERSION
+  #git remote add origin https://chetantarale:xxxxx@github.com/chetantarale/testRepo.git
   #ssh-agent $(ssh-add $KEY_FILE_PATH; git push origin git@github.com:chetantarale/testRepo.git)
   echo "completed pushing git tag $VERSION to $RES_REPO"
   popd
