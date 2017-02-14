@@ -1,5 +1,5 @@
 export RES_REPO=sample-script
-export RES_REPO=v1.0
+export VERSION=v1.0
 
 
 tag_push(){
