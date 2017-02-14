@@ -11,6 +11,8 @@ tag_push(){
   pushd ./IN/$RES_REPO/gitRepo
   echo "pushing git tag $VERSION to $RES_REPO"
   #git checkout $(git rev-list -n 1 $REL_VER)
+  git remote remove origin
+  git remote add origin https://chetantarale:2mm10cs009@github.com/chetantarale/testRepo.git
   git tag $VERSION
   git push origin $VERSION
   echo "completed pushing git tag $VERSION to $RES_REPO"
