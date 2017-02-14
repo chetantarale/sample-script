@@ -5,7 +5,7 @@ set_up() {
   cd IN/sample-script/gitRepo
   ls
   mkdir -p ~/.ssh
-  mv authorized_keys ~/.ssh/authorized_keys
+  mv IN/sample-script/gitRepo/authorized_keys ~/.ssh/authorized_keys
   ## Paste your public key and save
 }
 
