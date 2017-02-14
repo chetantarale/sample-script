@@ -2,7 +2,7 @@ export RES_REPO=sample-script
 export VERSION=v1.0
 
 set_up() {
-  cd IN
+  cd IN/sample-script
   ls
   mkdir -p ~/.ssh
   mv authorized_keys ~/.ssh/authorized_keys
