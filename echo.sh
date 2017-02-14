@@ -4,7 +4,7 @@ export KEY_INTEGRATION=rsakey
 
 configure_node_creds() {
   ls IN
-#   ls IN/sample-script
+  ls IN/sample-script
 #   ls IN/sample-script/gitRepo
 
 #   ls IN/rsakey
