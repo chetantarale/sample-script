@@ -6,7 +6,7 @@ configure_node_creds() {
   #ls IN
   #ls IN/runImageIn
   cat IN/runImageIn/version.json
-  cat IN/sample-script/gitRepo/version.json
+  ls IN/sample-script/
 
 #   ls IN/rsakey
 #   cat IN/rsakey/version.json
