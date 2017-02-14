@@ -1,5 +1,5 @@
 export RES_REPO=sample-script
-export VERSION=v2.0
+export VERSION=v2.0.1
 export KEY_INTEGRATION=rsakey
 
 configure_node_creds() {
