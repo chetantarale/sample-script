@@ -21,12 +21,11 @@ configure_node_creds() {
 
   ls -al $KEY_FILE_PATH
   echo "KEY file available at : $KEY_FILE_PATH"
-  echo "Completed Extracting AWS PEM"
   echo "-----------------------------------"
 
-  ssh-add $KEY_FILE_PATH
-  echo "SSH key added successfully"
-  echo "--------------------------------------"
+#   ssh-add $KEY_FILE_PATH
+#   echo "SSH key added successfully"
+#   echo "--------------------------------------"
 }
 
 
@@ -43,6 +42,6 @@ tag_push(){
   echo "completed pushing git tag $VERSION to $RES_REPO"
   popd
 }
-echo "running"
+
 configure_node_creds
 tag_push
