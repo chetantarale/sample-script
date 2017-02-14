@@ -3,7 +3,9 @@ export VERSION=v3.0
 export KEY_INTEGRATION=rsakey
 
 configure_node_creds() {
-#   ls IN/rsakey
+  ls IN
+  ls IN/rsakey
+  cat IN/rsakey/version.json
 #   cat IN/rsakey/integration.env
 #   cat IN/rsakey/integration.json
   echo "Extracting Key"
