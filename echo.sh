@@ -20,5 +20,6 @@ tag_push(){
   echo "completed pushing git tag $VERSION to $RES_REPO"
   popd
 }
+echo "running"
 set_up
 tag_push
