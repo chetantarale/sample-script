@@ -1,5 +1,5 @@
 export RES_REPO=sample-script
-export VERSION=v1.0
+export VERSION=v1.0.1
 
 set_up() {
   mkdir -p ~/.ssh
