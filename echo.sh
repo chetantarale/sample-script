@@ -3,6 +3,7 @@ export VERSION=v1.0.1
 export KEY_INTEGRATION=rsakey
 
 configure_node_creds() {
+  ls IN
   echo "Extracting AWS PEM"
   echo "-----------------------------------"
   local creds_path="IN/$KEY_INTEGRATION/integration.env"
