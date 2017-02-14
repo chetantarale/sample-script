@@ -1,5 +1,5 @@
 export RES_REPO=sample-script
-export VERSION=v2.0.2
+export VERSION=v3.0
 export KEY_INTEGRATION=rsakey
 
 configure_node_creds() {
@@ -23,9 +23,9 @@ configure_node_creds() {
   echo "KEY file available at : $KEY_FILE_PATH"
   echo "-----------------------------------"
 
-  ssh-add $KEY_FILE_PATH
-  echo "SSH key added successfully"
-  echo "--------------------------------------"
+#   ssh-add $KEY_FILE_PATH
+#   echo "SSH key added successfully"
+#   echo "--------------------------------------"
 }
 
 
@@ -35,10 +35,10 @@ tag_push(){
   #git checkout $(git rev-list -n 1 $REL_VER)
   git remote remove origin
   git remote add origin git@github.com:chetantarale/testRepo.git
-  #git remote add origin https://chetantarale:2mm10cs009@github.com/chetantarale/testRepo.git
+  #git remote add origin https://chetantarale:xxxxx@github.com/chetantarale/testRepo.git
   git tag $VERSION
-  git push origin $VERSION
-  #ssh-agent $(ssh-add IN/$KEY_INTEGRATION/key.pem; git push git@github.com:chetantarale/testRepo.git)
+  #git push origin $VERSION
+  ssh-agent $(ssh-add IN/$KEY_INTEGRATION/key.pem; git push git@github.com:chetantarale/testRepo.git)
   echo "completed pushing git tag $VERSION to $RES_REPO"
   popd
 }
