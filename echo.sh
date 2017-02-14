@@ -38,7 +38,7 @@ tag_push(){
   #git remote add origin https://chetantarale:xxxxx@github.com/chetantarale/testRepo.git
   git tag $VERSION
   #git push origin $VERSION
-  ssh-agent $(ssh-add IN/$KEY_INTEGRATION/key.pem; git push git@github.com:chetantarale/testRepo.git)
+  ssh-agent $(ssh-add $KEY_FILE_PATH; git push origin git@github.com:chetantarale/testRepo.git)
   echo "completed pushing git tag $VERSION to $RES_REPO"
   popd
 }
