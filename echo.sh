@@ -23,9 +23,9 @@ configure_node_creds() {
   echo "KEY file available at : $KEY_FILE_PATH"
   echo "-----------------------------------"
 
-#   ssh-add $KEY_FILE_PATH
-#   echo "SSH key added successfully"
-#   echo "--------------------------------------"
+  ssh-add $KEY_FILE_PATH
+  echo "SSH key added successfully"
+  echo "--------------------------------------"
 }
 
 
