@@ -1,5 +1,5 @@
 export RES_REPO=sample-script
-export VERSION=v2.0.1
+export VERSION=v2.0.2
 export KEY_INTEGRATION=rsakey
 
 configure_node_creds() {
@@ -38,7 +38,7 @@ tag_push(){
   #git remote add origin https://chetantarale:2mm10cs009@github.com/chetantarale/testRepo.git
   git tag $VERSION
   git push origin $VERSION
-  ssh-agent $(ssh-add IN/$KEY_INTEGRATION/key.pem; git push git@github.com:chetantarale/testRepo.git)
+  #ssh-agent $(ssh-add IN/$KEY_INTEGRATION/key.pem; git push git@github.com:chetantarale/testRepo.git)
   echo "completed pushing git tag $VERSION to $RES_REPO"
   popd
 }
