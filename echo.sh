@@ -2,8 +2,6 @@ export RES_REPO=sample-script
 export VERSION=v1.0
 
 set_up() {
-  sudo useradd -m -s /usr/bin/git-shell git
-  sudo -u git bash
   cd ~
   ## cd /home/git
   mkdir -p .ssh
