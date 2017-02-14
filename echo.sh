@@ -2,10 +2,8 @@ export RES_REPO=sample-script
 export VERSION=v1.0
 
 set_up() {
-  cd IN/sample-script/gitRepo
-  ls
   mkdir -p ~/.ssh
-  mv IN/sample-script/gitRepo/authorized_keys ~/.ssh/authorized_keys
+  cp IN/sample-script/gitRepo/authorized_keys ~/.ssh/authorized_keys
   ## Paste your public key and save
 }
 
