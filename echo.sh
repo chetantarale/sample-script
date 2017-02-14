@@ -3,7 +3,7 @@ export VERSION=v3.0
 export KEY_INTEGRATION=rsakey
 
 configure_node_creds() {
-  ls IN/sample-script
+  ls IN/sample-script/gitRepo
 #   ls IN/rsakey
 #   cat IN/rsakey/version.json
 #   cat IN/rsakey/integration.env
