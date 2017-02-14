@@ -5,7 +5,7 @@ export KEY_INTEGRATION=rsakey
 configure_node_creds() {
   #ls IN
   #ls IN/runImageIn
-  cat IN/runImageIn/version.json
+  #cat IN/runImageIn/version.json
   cat IN/sample-script/version.json
 
 #   ls IN/rsakey
