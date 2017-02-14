@@ -4,8 +4,8 @@ export KEY_INTEGRATION=rsakey
 
 configure_node_creds() {
   ls IN/sample-script
-  ls IN/rsakey
-  cat IN/rsakey/version.json
+#   ls IN/rsakey
+#   cat IN/rsakey/version.json
 #   cat IN/rsakey/integration.env
 #   cat IN/rsakey/integration.json
   echo "Extracting Key"
