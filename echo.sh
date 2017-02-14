@@ -4,9 +4,9 @@ export KEY_INTEGRATION=rsakey
 
 configure_node_creds() {
   #ls IN
-  ls IN/runImageIn
+  #ls IN/runImageIn
   cat IN/runImageIn/version.json
-#   ls IN/sample-script/gitRepo
+  cat IN/sample-script/gitRepo/version.json
 
 #   ls IN/rsakey
 #   cat IN/rsakey/version.json
