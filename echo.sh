@@ -1,11 +1,31 @@
 export RES_REPO=sample-script
 export VERSION=v1.0.1
+export KEY_INTEGRATION=rsakey
 
-set_up() {
-  mkdir -p ~/.ssh
-  cp IN/sample-script/gitRepo/authorized_keys ~/.ssh/authorized_keys
-  ## Paste your public key and save
+configure_node_creds() {
+  echo "Extracting AWS PEM"
+  echo "-----------------------------------"
+  local creds_path="IN/$KEY_INTEGRATION/integration.env"
+  if [ ! -f $creds_path ]; then
+    echo "No credentials file found at location: $creds_path"
+    return 1
+  fi
+
+  export KEY_FILE_PATH="IN/$KEY_INTEGRATION/key.pem"
+  cat IN/$KEY_INTEGRATION/integration.json  \
+    | jq -r '.key' > $KEY_FILE_PATH
+  chmod 600 $KEY_FILE_PATH
+
+  ls -al $KEY_FILE_PATH
+  echo "KEY file available at : $KEY_FILE_PATH"
+  echo "Completed Extracting AWS PEM"
+  echo "-----------------------------------"
+
+  ssh-add $KEY_FILE_PATH
+  echo "SSH key added successfully"
+  echo "--------------------------------------"
 }
+
 
 tag_push(){
   pushd ./IN/$RES_REPO/gitRepo
@@ -20,5 +40,5 @@ tag_push(){
   popd
 }
 echo "running"
-set_up
+configure_node_creds
 tag_push
