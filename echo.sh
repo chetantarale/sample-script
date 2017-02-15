@@ -3,19 +3,20 @@ export VERSION=v4
 export KEY_INTEGRATION=rsakey
 
 configure_node_creds() {
-  ls IN
-  echo "-------------------"
-  ls IN/runimagein
-  echo "-------------------"
-  cat IN/runimagein/version.json
-
-  local CURR_SHA=$(jq -r '.version.propertyBag.REPO_COMMIT_SHA' IN/runimagein/version.json)
-  echo "---------CURR_SHA----------"
-  echo $CURR_SHA
+#   ls IN
+#   echo "-------------------"
+#   ls IN/runimagein
+#   echo "-------------------"
+#   cat IN/runimagein/version.json
 #   ls IN/rsakey
 #   cat IN/rsakey/version.json
 #   cat IN/rsakey/integration.env
 #   cat IN/rsakey/integration.json
+
+  local CURR_SHA=$(jq -r '.version.propertyBag.REPO_COMMIT_SHA' IN/runimagein/version.json)
+  echo "---------CURR_SHA----------"
+  echo $CURR_SHA
+
   echo "Extracting Key"
   echo "-----------------------------------"
   local creds_path="IN/$KEY_INTEGRATION/integration.env"
