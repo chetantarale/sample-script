@@ -46,7 +46,7 @@ tag_push(){
   git clone git@github.com:chetantarale/5134.git
   pushd 5134
   git checkout $CURR_SHA
-  git tag $VERSION
+  git tag -a $VERSION
   git push origin $VERSION
   #git remote add origin https://chetantarale:xxxxx@github.com/chetantarale/testRepo.git
   #ssh-agent $(ssh-add $KEY_FILE_PATH; git push origin git@github.com:chetantarale/testRepo.git)
