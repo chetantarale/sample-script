@@ -42,10 +42,9 @@ tag_push(){
   echo "---------CURR_SHA----------"
   echo $CURR_SHA
   
-  pushd ./IN/$RES_REPO/gitRepo
   echo "pushing git tag $VERSION to $RES_REPO"
-  git remote remove origin
-  git remote add origin git@github.com:chetantarale/testRepo.git
+  git clone git@github.com:chetantarale/5134.git
+  pushd 5134
   git checkout $CURR_SHA
   git tag $VERSION
   git push origin $VERSION
