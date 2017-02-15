@@ -1,5 +1,5 @@
 export RES_REPO=sample-script
-export VERSION=v4
+export VERSION=$(eval echo "$RELJOB_VERSIONNAME") 
 export KEY_INTEGRATION=rsakey
 
 configure_node_creds() {
