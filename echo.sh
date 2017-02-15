@@ -3,10 +3,11 @@ export VERSION=v3.0
 export KEY_INTEGRATION=rsakey
 
 configure_node_creds() {
-  #ls IN
-  #ls IN/runImageIn
+  ls IN
+  echo "-------------------"
+  ls IN/runImageIn
+  echo "-------------------"
   #cat IN/runImageIn/version.json
-  cat IN/sample-script/version.json
 
 #   ls IN/rsakey
 #   cat IN/rsakey/version.json
