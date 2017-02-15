@@ -5,7 +5,7 @@ export KEY_INTEGRATION=rsakey
 configure_node_creds() {
   ls IN
   echo "-------------------"
-  ls IN/runImageIn
+  ls IN/runimagein
   echo "-------------------"
   #cat IN/runImageIn/version.json
 
