@@ -46,7 +46,7 @@ tag_push(){
   git clone git@github.com:chetantarale/5134.git
   pushd 5134
   git checkout $CURR_SHA
-  git tag -a $VERSION
+  git tag -a $VERSION -m "pushing tag $VERSION"
   git tag
   git push origin --tags
   #git remote add origin https://chetantarale:xxxxx@github.com/chetantarale/testRepo.git
