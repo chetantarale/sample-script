@@ -47,7 +47,8 @@ tag_push(){
   pushd 5134
   git checkout $CURR_SHA
   git tag -a $VERSION
-  git push origin $VERSION
+  git tag
+  git push origin --tags
   #git remote add origin https://chetantarale:xxxxx@github.com/chetantarale/testRepo.git
   #ssh-agent $(ssh-add $KEY_FILE_PATH; git push origin git@github.com:chetantarale/testRepo.git)
   echo "completed pushing git tag $VERSION to $RES_REPO"
