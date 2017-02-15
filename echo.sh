@@ -6,16 +6,12 @@ configure_node_creds() {
 #   ls IN
 #   echo "-------------------"
 #   ls IN/runimagein
-#   echo "-------------------"
+   echo "-------------------"
 #   cat IN/runimagein/version.json
 #   ls IN/rsakey
 #   cat IN/rsakey/version.json
 #   cat IN/rsakey/integration.env
 #   cat IN/rsakey/integration.json
-
-  local CURR_SHA=$(jq -r '.version.propertyBag.REPO_COMMIT_SHA' IN/runimagein/version.json)
-  echo "---------CURR_SHA----------"
-  echo $CURR_SHA
   printenv
   
   echo "Extracting Key"
@@ -42,10 +38,15 @@ configure_node_creds() {
 
 
 tag_push(){
+  local CURR_SHA=$(jq -r '.version.propertyBag.REPO_COMMIT_SHA' IN/runimagein/version.json)
+  echo "---------CURR_SHA----------"
+  echo $CURR_SHA
+  
   pushd ./IN/$RES_REPO/gitRepo
   echo "pushing git tag $VERSION to $RES_REPO"
   git remote remove origin
   git remote add origin git@github.com:chetantarale/testRepo.git
+  git checkout $CURR_SHA
   git tag $VERSION
   git push origin $VERSION
   #git remote add origin https://chetantarale:xxxxx@github.com/chetantarale/testRepo.git
