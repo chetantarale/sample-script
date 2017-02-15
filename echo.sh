@@ -16,7 +16,8 @@ configure_node_creds() {
   local CURR_SHA=$(jq -r '.version.propertyBag.REPO_COMMIT_SHA' IN/runimagein/version.json)
   echo "---------CURR_SHA----------"
   echo $CURR_SHA
-
+  printenv
+  
   echo "Extracting Key"
   echo "-----------------------------------"
   local creds_path="IN/$KEY_INTEGRATION/integration.env"
