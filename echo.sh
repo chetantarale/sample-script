@@ -50,7 +50,7 @@ tag_push(){
   #git clone git@github.com:chetantarale/sample_script.git sample_script1
   echo "---------CURR_SHA----------"
   pwd
-  ls
+  ls /tmp
   echo "---------CURR_SHA----------"
   pushd 5134
   git fetch --tags
