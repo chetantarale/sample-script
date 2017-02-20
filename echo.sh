@@ -46,7 +46,7 @@ tag_push(){
   echo $CURR_SHA
   
   echo "pushing git tag $VERSION to $RES_REPO"
-  ssh-add /tmp/key.pem; git@github.com:chetantarale/$RES_REPO.git $RES_REPO
+  ssh-add /tmp/key.pem; git@github.com:chetantarale/sample-script.git $RES_REPO
   #git clone git@github.com:chetantarale/sample_script.git sample_script1
   echo "---------CURR_SHA----------"
   pwd
