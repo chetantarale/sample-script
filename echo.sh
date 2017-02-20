@@ -46,8 +46,8 @@ tag_push(){
   echo $CURR_SHA
   
   echo "pushing git tag $VERSION to $RES_REPO"
-  git clone git@github.com:chetantarale/5134.git
-  pushd 5134
+  git clone git@github.com:chetantarale/sample_script.git
+  pushd sample_script
   git fetch --tags
   git checkout $CURR_SHA
   git tag $VERSION #-m "pushing tag $VERSION"
@@ -75,4 +75,4 @@ clean_old_tags() {
 }
 configure_node_creds
 tag_push
-clean_old_tags
+#clean_old_tags
