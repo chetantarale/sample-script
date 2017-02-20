@@ -14,26 +14,28 @@ configure_node_creds() {
 #   cat IN/rsakey/integration.json
   printenv
   
-  echo "Extracting Key"
-  echo "-----------------------------------"
-  local creds_path="IN/$KEY_INTEGRATION/integration.env"
-  if [ ! -f $creds_path ]; then
-    echo "No credentials file found at location: $creds_path"
-    return 1
-  fi
+#   echo "Extracting Key"
+#   echo "-----------------------------------"
+#   local creds_path="IN/$KEY_INTEGRATION/integration.env"
+#   if [ ! -f $creds_path ]; then
+#     echo "No credentials file found at location: $creds_path"
+#     return 1
+#   fi
 
-  export KEY_FILE_PATH="IN/$KEY_INTEGRATION/key.pem"
-  cat IN/$KEY_INTEGRATION/integration.json  \
-    | jq -r '.privateKey' > $KEY_FILE_PATH
-  chmod 600 $KEY_FILE_PATH
+#   export KEY_FILE_PATH="IN/$KEY_INTEGRATION/key.pem"
+#   cat IN/$KEY_INTEGRATION/integration.json  \
+#     | jq -r '.privateKey' > $KEY_FILE_PATH
+#   chmod 600 $KEY_FILE_PATH
 
-  ls -al $KEY_FILE_PATH
-  echo "KEY file available at : $KEY_FILE_PATH"
-  echo "-----------------------------------"
-
-  ssh-add $KEY_FILE_PATH
-  echo "SSH key added successfully"
-  echo "--------------------------------------"
+#   ls -al $KEY_FILE_PATH
+#   echo "KEY file available at : $KEY_FILE_PATH"
+#   echo "-----------------------------------"
+  eval `ssh-agent -s`
+  ps -eaf | grep ssh
+  which ssh-agent
+  #ssh-add $KEY_FILE_PATH
+#   echo "SSH key added successfully"
+#   echo "--------------------------------------"
 }
 
 
