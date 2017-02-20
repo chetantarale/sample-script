@@ -46,11 +46,12 @@ tag_push(){
   echo $CURR_SHA
   
   echo "pushing git tag $VERSION to $RES_REPO"
-  git clone git@github.com:chetantarale/5134.git
+  git clone git@github.com:chetantarale/sample_script.git sample_script1
   echo "---------CURR_SHA----------"
   pwd
+  ls
   echo "---------CURR_SHA----------"
-  pushd 5134
+  pushd sample_script1
   git fetch --tags
   git checkout $CURR_SHA
   git tag $VERSION #-m "pushing tag $VERSION"
