@@ -34,7 +34,7 @@ configure_node_creds() {
   eval `ssh-agent -s`
   ps -eaf | grep ssh
   which ssh-agent
-  #ssh-add /tmp/key.pem
+  ssh-add /tmp/sample-script_key.pem
   #ssh-add $KEY_FILE_PATH
 #   echo "SSH key added successfully"
 #   echo "--------------------------------------"
