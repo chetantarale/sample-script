@@ -7,7 +7,7 @@ configure_node_creds() {
 #   echo "-------------------"
 #   ls IN/runimagein
    echo "-------------------"
-   ls /tmp
+#    ls /tmp
 #   cat IN/runimagein/version.json
 #   ls IN/rsakey
 #   cat IN/rsakey/version.json
