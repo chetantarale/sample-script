@@ -81,6 +81,8 @@ clean_old_tags() {
    done
    popd
 }
-configure_node_creds
-tag_push
+# configure_node_creds
+# tag_push
 #clean_old_tags
+
+echo "Just Checking"
